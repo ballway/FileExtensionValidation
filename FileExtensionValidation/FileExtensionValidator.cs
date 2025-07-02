@@ -10,7 +10,8 @@ namespace FileExtensionValidation
     {
         //https://en.wikipedia.org/wiki/List_of_file_signatures
         //https://www.filesignatures.net/index.php
-        //https://www.garykessler.net/library/file_sigs.html
+        //https://www.garykessler.net/library/file_sigs.html (作者已退休，於 2025 轉交 SEARCH 團隊維護 https://filesig.search.org/)
+        //https://www.garykessler.net/library/file_sigs_GCK_latest.html
         //https://asecuritysite.com/forensics/magic
         private static Dictionary<string, List<(byte[] Signature, int Offset, int Skip, byte[] SecondSignature)>> fileSignature
             = new Dictionary<string, List<(byte[] Signature, int Offset, int Skip, byte[] SecondSignature)>>() {
