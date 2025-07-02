@@ -31,11 +31,7 @@ namespace FileExtensionValidation
                                     (new byte[] { 0x57, 0x69, 0x6E, 0x5A, 0x69, 0x70 }, 0, 0, new byte[] { })
                                     }
                                 },
-        { ".PNG", new List<(byte[], int, int, byte[])> { (new byte[] { 0x89, 0x50, 0x4E, 0x47 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE0 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE1 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE8 }, 0, 0, new byte[] { })
-                                } },
+        { ".PNG", new List<(byte[], int, int, byte[])> { (new byte[] { 0x89, 0x50, 0x4E, 0x47 }, 0, 0, new byte[] { })} },
         { ".JPG", new List<(byte[], int, int, byte[])>
                         {
                                 (new byte[] { 0xFF, 0xD8, 0xFF, 0xE0 }, 0, 0, new byte[] { }),
