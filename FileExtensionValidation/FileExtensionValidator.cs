@@ -10,7 +10,8 @@ namespace FileExtensionValidation
     {
         //https://en.wikipedia.org/wiki/List_of_file_signatures
         //https://www.filesignatures.net/index.php
-        //https://www.garykessler.net/library/file_sigs.html
+        //https://www.garykessler.net/library/file_sigs.html (作者已退休，於 2025 轉交 SEARCH 團隊維護 https://filesig.search.org/)
+        //https://www.garykessler.net/library/file_sigs_GCK_latest.html
         //https://asecuritysite.com/forensics/magic
         private static Dictionary<string, List<(byte[] Signature, int Offset, int Skip, byte[] SecondSignature)>> fileSignature
             = new Dictionary<string, List<(byte[] Signature, int Offset, int Skip, byte[] SecondSignature)>>() {
@@ -30,11 +31,7 @@ namespace FileExtensionValidation
                                     (new byte[] { 0x57, 0x69, 0x6E, 0x5A, 0x69, 0x70 }, 0, 0, new byte[] { })
                                     }
                                 },
-        { ".PNG", new List<(byte[], int, int, byte[])> { (new byte[] { 0x89, 0x50, 0x4E, 0x47 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE0 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE1 }, 0, 0, new byte[] { }),
-                                             (new byte[] { 0xFF, 0xD8, 0xFF, 0xE8 }, 0, 0, new byte[] { })
-                                } },
+        { ".PNG", new List<(byte[], int, int, byte[])> { (new byte[] { 0x89, 0x50, 0x4E, 0x47 }, 0, 0, new byte[] { })} },
         { ".JPG", new List<(byte[], int, int, byte[])>
                         {
                                 (new byte[] { 0xFF, 0xD8, 0xFF, 0xE0 }, 0, 0, new byte[] { }),
